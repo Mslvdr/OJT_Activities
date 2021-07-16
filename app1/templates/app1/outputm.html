@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block page_title %}
+output data
+{% endblock  %}
+
+{% block content %}
+{% include 'app1/includes/header.html' %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <button type="submit">Send</button>
+    </form>
+    {% comment %} <ul>
+        {% for keys, values in dictionary.items %}
+            <pre>{{keys|stringformat:"04d"| pprint}} : {{values | pprint}},</pre>
+        {% endfor %}
+    </ul> {% endcomment %}
+    <pre>{{ dictionary }}</pre>
+{% endblock  %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block page_title %}
+Menu
+{% endblock  %}
+
+{% block content %}
+    <ul>
+        <li><a href="{% url 'single-input' %}">Input Single</a></li>
+        <li><a href="{% url 'multiple-input' %}">Input Many</a></li>
+        <li><a href="{% url 'output-single' %}">Output Single</a></li>
+        <li><a href="{% url 'output-multiple' %}">Output Many</a></li>
+    </ul>
+{% endblock  %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block page_title %}
+output data
+{% endblock  %}
+
+{% block content %}
+{% include 'app1/includes/header.html' %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <button type="submit">Send</button>
+    </form>
+        <h1>Key: {{ id }}</h1>
+        <h1>Name: {{ name }}</h1>
+{% endblock  %}

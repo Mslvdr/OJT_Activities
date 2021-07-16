@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block page_title %}
+Input Many
+{% endblock  %}
+
+{% block content %}
+{% include 'app1/includes/header.html' %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <button type="submit">Send</button>
+    </form>
+{% endblock  %}
